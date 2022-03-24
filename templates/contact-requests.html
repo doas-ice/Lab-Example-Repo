@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container">
+	<table class="table">
+	<thead>
+		<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Message</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for c in contact %}
+		<tr>
+		<td>{{c.id}}</td>
+		<td>{{c.name}}</td>
+		<td>{{c.email}}</td>
+		<td>{{c.message}}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+	</table>
+</div>
+{% endblock %}
